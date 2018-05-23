@@ -16,4 +16,5 @@ for (let n = 0; n < arry_str.length; n++) {
 }
 console.log(RemovalStr(buf_arry_str))
 
-// 作業時間約30分　参考サイトは特になし
+// 作業時間約30分
+// 参考サイトは特になし
