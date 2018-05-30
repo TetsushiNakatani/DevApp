@@ -4,9 +4,9 @@ const play = function() {
 }
 const rock_paper_scissors = { 0: 'グー', 1: 'チョキ', 2: 'パー' }
 const combination = [
-  ['アイコでしょ！', 'あなたの勝ち！', 'あなたの負け！'], // ユーザー：グー　[あいこ、勝ち、負け]
-  ['あなたの負け！', 'アイコでしょ！', 'あなたの勝ち！'], // ユーザー：チョキ　[負け、あいこ、勝ち]
-  ['あなたの勝ち！', 'あなたの負け！', 'アイコでしょ！'], // ユーザー：パー　[勝ち、負け、あいこ]
+  ['「アイコでしょ！」', '「あなたの勝ち！」', '「あなたの負け！」'], // ユーザー：グー　[あいこ、勝ち、負け]
+  ['「あなたの負け！」', '「アイコでしょ！」', '「あなたの勝ち！」'], // ユーザー：チョキ　[負け、あいこ、勝ち]
+  ['「あなたの勝ち！」', '「あなたの負け！」', '「アイコでしょ！」'], // ユーザー：パー　[勝ち、負け、あいこ]
 ]
 
 let inputstr = window.prompt('「じゃんけん・・・」\n 0.グー 1.チョキ 2.パー') // 入力
@@ -17,7 +17,7 @@ while (result === true) {
   console.log('＊コンピュータ：' + rock_paper_scissors[comp])
   console.log('＊あなた ：' + rock_paper_scissors[inputstr])
   if (comp === parseInt(inputstr)) {
-    console.log('「アイコでしょ！」')
+    console.log(combination[inputstr][comp])
     inputstr = window.prompt('「じゃんけん・・・」\n 0.グー 1.チョキ 2.パー') // 入力
     result = true
   } else {
