@@ -5,7 +5,7 @@ for (let n = 0; n < arry_str.length; n++) {
   if (!buf_obj_str[arry_str[n]]) {
     buf_obj_str[arry_str[n]] = 1
   } else {
-    buf_obj_str[arry_str[n]] = buf_obj_str[arry_str[n]] + 1
+    buf_obj_str[arry_str[n]] += 1
   }
 }
 console.log(buf_obj_str)
