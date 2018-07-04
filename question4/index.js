@@ -1,15 +1,14 @@
 const inputstr = window.prompt('好きな数字を入力してください') // 入力
-let smuNum = 0
-const addfunc = function(nowNum, inputNum) {
-  smuNum = smuNum + nowNum
-  if (nowNum >= inputNum) {
-    console.log('出力：' + smuNum)
+const addfunc = function(inputNum) {
+  if (inputNum > 0) {
+    return inputNum + addfunc(inputNum - 1)
   } else {
-    nowNum++
-    addfunc(nowNum, inputNum)
+    return 0
   }
 }
 console.log('入力：' + inputstr)
-addfunc(0, parseInt(inputstr))
-// 作業時間約15分
-// 参考サイトは特になし
+const result = addfunc(parseInt(inputstr))
+console.log('出力：' + result)
+// 作業時間約15分 + 修正30分
+// 参考サイトは以下
+// https://qiita.com/chuck0523/items/2c40a5da90a1d73ab956
